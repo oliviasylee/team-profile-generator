@@ -42,7 +42,7 @@ const compile = () => {
 </main>`
 }
 
-const baseHtml = () => {
+const generateHTML = () => {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -58,4 +58,5 @@ const baseHtml = () => {
     </html>`
 }
 
-export default baseHtml()
+// export default baseHtml()
+module.exports = generateHTML;
