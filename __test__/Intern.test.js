@@ -1,27 +1,23 @@
 const Intern = require('../lib/Intern');
-describe('Intern', () => {
+const intern = new Intern('Ava', 3, 'ava@test.com', 'GWU');
+describe('Intern class', () => {
   test('gets the name', () => {
-    const intern = new Intern('Olivia', 15, 'oliviasylee@gmail.com', 'GWU');
-    expect(intern.getName()).toBe('Olivia');
+    expect(intern.getName()).toEqual('Ava');
   });
   
   test('gets the id', () => {
-    const intern = new Intern('Olivia', 15, 'oliviasylee@gmail.com', 'GWU');
-    expect(intern.getId()).toBe(15);
+    expect(intern.getId()).toEqual(3);
   });
 
   test('gets the Email', () => {
-    const intern = new Intern('Olivia', 15, 'oliviasylee@gmail.com', 'GWU');
-    expect(intern.getEmail()).toBe('oliviasylee@gmail.com');
+    expect(intern.getEmail()).toEqual('ava@test.com');
   });
 
   test('gets the school', () => {
-    const intern = new Intern('Olivia', 15, 'oliviasylee@gmail.com', 'GWU');
-    expect(intern.getSchool()).toBe('GWU');
+    expect(intern.getSchool()).toEqual('GWU');
   });
 
   test('gets the role', () => {
-    const intern = new Intern('Olivia', 15, 'oliviasylee@gmail.com', 'GWU');
-    expect(intern.getRole()).toBe('Intern');
+    expect(intern.getRole()).toEqual('Intern');
   });
 });

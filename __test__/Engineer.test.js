@@ -1,27 +1,24 @@
 const Engineer = require('../lib/Engineer');
-describe('Engineer', () => {
+const engineer = new Engineer('Ava', 2, 'ava@test.com', 'avaswe');
+
+describe('Engineer class', () => {
   test('gets the name', () => {
-    const engineer = new Engineer('Olivia', 13, 'oliviasylee@gmail.com', 'oliviasylee');
-    expect(engineer.getName()).toBe('Olivia');
+    expect(engineer.getName()).toBe('Ava');
   });
   
   test('gets the id', () => {
-    const engineer = new Engineer('Olivia', 13, 'oliviasylee@gmail.com', 'oliviasylee');
-    expect(engineer.getId()).toBe(13);
+    expect(engineer.getId()).toBe(2);
   });
 
   test('gets the Email', () => {
-    const engineer = new Engineer('Olivia', 13, 'oliviasylee@gmail.com', 'oliviasylee');
-    expect(engineer.getEmail()).toBe('oliviasylee@gmail.com');
+    expect(engineer.getEmail()).toBe('ava@test.com');
   });
 
   test('gets the gitHub account', () => {
-    const engineer = new Engineer('Olivia', 13, 'oliviasylee@gmail.com', 'oliviasylee');
-    expect(engineer.getGitHub()).toBe('oliviasylee');
+    expect(engineer.getGitHub()).toBe('avaswe');
   });
 
   test('gets the role', () => {
-    const engineer = new Engineer('Olivia', 13, 'oliviasylee@gmail.com', 'oliviasylee');
     expect(engineer.getRole()).toBe('Engineer');
   });
 });

@@ -120,7 +120,7 @@ const addEmployee = () => {
 const generateHTMLFile = () => {
     fs.writeFile(outputPath, generateHTML(teamArr), 'utf-8', err => {
         if(err) throw err;
-        console.log(`HTML file has been created. Check out index.html in the dist/ folder to see it!'`)
+        console.log(`HTML file has been created. Check out index.html in the dist/ folder to see it!`)
    });
 }
 

@@ -1,31 +1,23 @@
-// manager.test.js
 const Manager = require('../lib/Manager');
-
-// getName(), getId(), getEmail()
-// getOfficeNumber(), getRole()
-describe('Manager', () => {
-  test('gets the name', () => {
-    const manager = new Manager('Olivia', 13, 'oliviasylee@gmail.com', 123);
-    expect(manager.getName()).toBe('Olivia');
+const manager = new Manager('Ava', 1, 'ava@test.com', 101);
+describe('Manager class', () => {
+  test('gets the name', () => {  
+    expect(manager.getName()).toBe('Ava');
   });
   
   test('gets the id', () => {
-    const manager = new Manager('Olivia', 13, 'oliviasylee@gmail.com', 123);
-    expect(manager.getId()).toBe(13);
+    expect(manager.getId()).toBe(1);
   });
 
   test('gets the Email', () => {
-    const manager = new Manager('Olivia', 13, 'oliviasylee@gmail.com', 123);
-    expect(manager.getEmail()).toBe('oliviasylee@gmail.com');
+    expect(manager.getEmail()).toBe('ava@test.com');
   });
 
   test('gets the office number', () => {
-    const manager = new Manager('Olivia', 13, 'oliviasylee@gmail.com', 123);
-    expect(manager.getOfficeNumber()).toBe(123);
+    expect(manager.getOfficeNumber()).toBe(101);
   });
 
   test('gets the role', () => {
-    const manager = new Manager('Olivia', 13, 'oliviasylee@gmail.com', 123);
     expect(manager.getRole()).toBe('Manager');
   });
 });

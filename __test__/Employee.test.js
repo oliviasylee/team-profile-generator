@@ -1,21 +1,17 @@
-// employee.test.js
 const Employee = require('../lib/Employee');
+const employee = new Employee('Ava', 1, 'ava@test.com');
 
-describe('Employee', () => {
+describe('Employee class', () => {
     test('gets the name', () => {
-        const employee = new Employee('Olivia', 1, 'olivia@gmail.com');
-        expect(employee.getName()).toBe('Olivia');
+        expect(employee.getName()).toEqual('Ava');
     });
     test('gets the id', () => {
-        const employee = new Employee('Olivia', 1, 'oliviasylee@gmail.com');
-        expect(employee.getId()).toBe(1);
+        expect(employee.getId()).toEqual(1);
     });
     test('gets the email', () => {
-        const employee = new Employee('Olivia', 1, 'oliviasylee@gmail.com');
-        expect(employee.getEmail()).toBe('oliviasylee@gmail.com');
+        expect(employee.getEmail()).toEqual('ava@test.com');
     });
     test('gets the role', () => {
-        const employee = new Employee('Olivia', 1, 'oliviasylee@gmail.com');
-        expect(employee.getRole()).toBe('Employee');
+        expect(employee.getRole()).toEqual('Employee');
     });
 });
