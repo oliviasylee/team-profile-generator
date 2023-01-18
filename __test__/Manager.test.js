@@ -1,5 +1,5 @@
 // manager.test.js
-const Manager = require('../lib/manager');
+const Manager = require('../lib/Manager');
 
 // getName(), getId(), getEmail()
 // getOfficeNumber(), getRole()
