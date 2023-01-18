@@ -118,9 +118,9 @@ const addEmployee = () => {
 };
 
 const generateHTMLFile = () => {
-    fs.writeFileSync(outputPath, generateHTML(teamArr), 'utf-8', err => {
+    fs.writeFile(outputPath, generateHTML(teamArr), 'utf-8', err => {
         if(err) throw err;
-        console.log(`HTML has been created! See Team Profile Page ${outputPath}`)
+        console.log(`HTML file has been created. Check out index.html in the dist/ folder to see it!'`)
    });
 }
 
@@ -130,8 +130,8 @@ managerQuestions()
         return generateHTML(teamArr);
     })
     .then(pageHTML => {
-        console.log(pageHTML);
         return generateHTMLFile(pageHTML);
+        
     })
     .catch(err => {
     console.log(err);

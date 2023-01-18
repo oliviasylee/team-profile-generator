@@ -1,15 +1,17 @@
 const generateTeam = team => {
 
     const managerSection = manager => {
-        return `<section class="card">
-        <h1>Manager</h1>
-        <ul>
-            <li>Name: ${manager.name}</li>
-            <li>ID: ${manager.id}</li>
-            <li>Email: ${manager.email}</li>
-            <li>Office Number: ${manager.officeNumber}</li>
-        </ul>
-    </section>`;
+        return ` <div class="card manager flex-container">
+        <div class="card-body">
+            <h5 class="card-title">${manager.name}</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-people-roof"></i>Manager</h6>
+                <ul>
+                    <li>Name: ${manager.name}</li>
+                    <li>ID: ${manager.id}</li>
+                    <li>Email: <a href="mailto:${manager.email}" target="_blank">${manager.email}</a></li>
+                    <li>Office Number: ${manager.officeNumber}</li>
+                </ul>
+        </div>`;
     };
 
     const engineerSection = engineer => {
@@ -18,8 +20,8 @@ const generateTeam = team => {
         <ul>
             <li>Name: ${engineer.name}</li>
             <li>ID: ${engineer.id}</li>
-            <li>Email: ${engineer.email}</li>
-            <li>GitHub: ${engineer.github}</li>
+            <li>Email: <a href="mailto:${engineer.email}" target="_blank">${engineer.email}</a></li>
+            <li>GitHub: <a href="https://github.com/${engineer.gitHub}" target="_blank">${engineer.gitHub}</a></li>
         </ul>
     </section>`;
     };
@@ -30,7 +32,7 @@ const generateTeam = team => {
         <ul>
             <li>Name: ${intern.name}</li>
             <li>ID: ${intern.id}</li>
-            <li>Email: ${intern.email}</li>
+            <li>Email: <a href="mailto:${intern.email}" target="_blank">${intern.email}</a></li>
             <li>School: ${intern.school}</li>
         </ul>
     </section>`;
