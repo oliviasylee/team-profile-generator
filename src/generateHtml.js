@@ -78,8 +78,7 @@ const generateTeam = team => {
 }
 
 module.exports = team => {
-    return `
-<!DOCTYPE html>
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -96,7 +95,7 @@ module.exports = team => {
 <body>
     <header class="jumbotron">
         <h1 class="display-3">My Team</h1>
-        <p class="lead">A simple Node.js command-line app for generating the team's basic info</p>
+        <p class="lead text-muted">A simple Node.js command-line app for generating the team's basic info</p>
     </header>
 
     <div class="container">
