@@ -2,6 +2,7 @@
 const Manager = require('./lib/Manager'); 
 const Engineer = require('./lib/Engineer'); 
 const Intern = require('./lib/Intern'); 
+const generateHTML = require('./src/generateHtml');
 
 // Native & Default Module
 const fs = require('fs');
@@ -9,15 +10,15 @@ const fs = require('fs');
 // Third Party Module
 const inquirer = require('inquirer');
 
-const generateHTML = require('./src/generateHtml');
-
-// path module
+// Path module
 const path = require('path');
 const OUTPUT_DIR = path.resolve(__dirname, 'dist');
 const outputPath = path.join(OUTPUT_DIR, 'index.html');
 
-var teamArr = [];
+// Team array
+const teamArr = [];
 
+// Manager questions prompt
 const managerQuestions = () => {
     console.log('Welcome to the Team Profile Generator!\n Please answer the questions and build your team.');
     return inquirer
@@ -50,6 +51,7 @@ const managerQuestions = () => {
             });
 }
 
+// Adds employees -engineer or intern- prompt
 const addEmployee = () => {
     console.log(`
     =================================
@@ -117,6 +119,7 @@ const addEmployee = () => {
         })
 };
 
+// Creates the html file 
 const generateHTMLFile = () => {
     fs.writeFile(outputPath, generateHTML(teamArr), 'utf-8', err => {
         if(err) throw err;
@@ -124,6 +127,7 @@ const generateHTMLFile = () => {
    });
 }
 
+// Prompts the user for information, add the information to an array, generate HTML, write the HTML to a file, and handle any errors that may occur during the process.
 managerQuestions()
     .then(addEmployee)
     .then(teamArr => {

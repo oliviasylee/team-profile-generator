@@ -1,5 +1,6 @@
 const generateTeam = team => {
 
+    // Renders manager information
     const managerSection = manager => {
         return `
     <div class="container bootstrap snippets bootdeys">
@@ -22,6 +23,7 @@ const generateTeam = team => {
     </div>`;
     };
 
+    // Renders engineer information
     const engineerSection = engineer => {
         return `
             <div class="col-md-3 col-sm-6 content-card">
@@ -41,7 +43,8 @@ const generateTeam = team => {
             </div>
         </div>`;
     };
-
+    
+    // Renders intern information
     const internSection = intern => {
         return `
             <div class="col-md-3 col-sm-6 content-card">
@@ -65,6 +68,7 @@ const generateTeam = team => {
     `;
     };
 
+    // Filters the team array by employee role, calling corresponding section functions for each role, joining the returned values, and adding it to the html array joined as a string.  
     const html  = [];
 
     html.push(team.filter(employee => employee.getRole() === "Manager").map(manager => managerSection(manager))
@@ -77,6 +81,7 @@ const generateTeam = team => {
     return html.join("");
 }
 
+// Generates HTML page
 module.exports = team => {
     return `<!DOCTYPE html>
 <html lang="en">

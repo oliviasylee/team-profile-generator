@@ -1,6 +1,5 @@
 const Engineer = require('../lib/Engineer');
 const engineer = new Engineer('Ava', 2, 'ava@test.com', 'avaswe');
-
 describe('Engineer class', () => {
   test('gets the name', () => {
     expect(engineer.getName()).toBe('Ava');
