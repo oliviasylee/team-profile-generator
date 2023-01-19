@@ -15,12 +15,17 @@
   
   ## Installation
   1. Clone this repository. 
-  > git clone git@github.com:oliviasylee/team-profile-generator.git 
+  ```
+  git clone git@github.com:oliviasylee/team-profile-generator.git 
+  ```
   2. Run ‘npm install’ from the terminal at the root directory of the local repository to install the required dependencies.
-  > npm install
+  ```
+  npm install
+  ```
   3. Run ‘Node index.js’ to run the application.
-  > Node index.js
-  
+  ```
+  node index.js
+  ```
   ## Usage
  Here is a full movie showing how the application works: [Click here](link here) <br><br>
  [![README-generator-screenshot](assets/team-profile-generator.png)](https://github.com/oliviasylee/team-profile-generator)
@@ -28,8 +33,9 @@
   ## Tests
   This application has been developed using the Test-Driven Development (TDD) approach with the help of "Jest" package. To ensure that the properties and methods of each of the classes are working as expected, you can run the following command to run the tests.
 
-  > npm test
-  
+```
+  npm test
+```
   ## Contributing
   Olivia Seonyeong Lee
   
