@@ -14,16 +14,17 @@
   - [Questions](#questions)
   
   ## Installation
-  1. Clone this repository. git clone git@github.com:oliviasylee/team-profile-generator.git 2. 2. Run ‘npm install’ from the terminal at the root directory of the local repository to install the required dependencies 3. un ‘Node index.js’ to run the application
+  1. Clone this repository. git clone git@github.com:oliviasylee/team-profile-generator.git 
+  2. Run ‘npm install’ from the terminal at the root directory of the local repository to install the required dependencies 
+  3. Run ‘Node index.js’ to run the application
   
   ## Usage
   Here is a full movie showing how the application works: Click here
   
-  ## License    
- This application is covered by the MIT. To learn more about this, click the license button.
-  
   ## Tests
-  "This application has been developed using the Test-Driven Development (TDD) approach with the help of "Jest" package. To ensure that all core functions are working as expected, you can run the following command to run the tests: "
+  This application has been developed using the Test-Driven Development (TDD) approach with the help of "Jest" package. To ensure that all core functions are working as expected, you can run the following command to run the tests
+
+  npm test
   
   ## Contributing
   Olivia Seonyeong Lee
