@@ -1,13 +1,13 @@
-// Custom Module
+// Custom module
 const Manager = require('./lib/Manager'); 
 const Engineer = require('./lib/Engineer'); 
 const Intern = require('./lib/Intern'); 
 const generateHTML = require('./src/generateHtml');
 
-// Native & Default Module
+// Native & default module
 const fs = require('fs');
 
-// Third Party Module
+// Third party module
 const inquirer = require('inquirer');
 
 // Path module

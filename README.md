@@ -1,4 +1,3 @@
-
   # Team Profile Generator
 
   ## Description
@@ -27,8 +26,10 @@
   node index.js
   ```
   ## Usage
- Here is a full movie showing how the application works: [Click here](link here) <br><br>
- [![README-generator-screenshot](assets/team-profile-generator.png)](https://github.com/oliviasylee/team-profile-generator)
+Here is a full movie showing how the application works. Click the below screenshot. <br>
+[![preview](assets/team-profile-generator-CLI.png)](https://drive.google.com/file/d/1HA8Yzy8ePvq8e9AbrcB4wwuA5Z-RK-GQ/view)
+ ### Application Interface
+[![README-generator-screenshot](assets/team-profile-generator.png)](https://github.com/oliviasylee/team-profile-generator)
 
   ## Tests
   This application has been developed using the Test-Driven Development (TDD) approach with the help of "Jest" package. To ensure that the properties and methods of each of the classes are working as expected, you can run the following command to run the tests.
