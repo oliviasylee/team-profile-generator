@@ -1,41 +1,68 @@
 const generateTeam = team => {
 
     const managerSection = manager => {
-        return ` <div class="card manager flex-container">
-        <div class="card-body">
-            <h5 class="card-title">${manager.name}</h5>
-            <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-people-roof"></i>Manager</h6>
-                <ul>
-                    <li>Name: ${manager.name}</li>
-                    <li>ID: ${manager.id}</li>
-                    <li>Email: <a href="mailto:${manager.email}" target="_blank">${manager.email}</a></li>
-                    <li>Office Number: ${manager.officeNumber}</li>
-                </ul>
-        </div>`;
+        return `
+    <div class="container bootstrap snippets bootdeys">
+        <div class="row card-boxes">
+            <div class="col-md-3 col-sm-6 content-card">
+                <div class="card-big-shadow">
+                    <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
+                    <div class="content">
+                        <h6 class="category"><i class="fa-solid fa-people-roof"></i> ${manager.getRole()}</h6>
+                        <h4 class="title">${manager.name}</h4>
+
+                    <p class="description">  
+                    <i class="fa-regular fa-id-card"></i> ID #${manager.id} <br>
+                    <i class="fa-regular fa-envelope"></i> <a href="mailto:${manager.email}" target="_blank">${manager.email}</a> <br>
+                    <i class="fa-regular fa-building"></i> Office #${manager.officeNumber}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>`;
     };
 
     const engineerSection = engineer => {
-        return `<section class="card">
-        <h1>Engineer</h1>
-        <ul>
-            <li>Name: ${engineer.name}</li>
-            <li>ID: ${engineer.id}</li>
-            <li>Email: <a href="mailto:${engineer.email}" target="_blank">${engineer.email}</a></li>
-            <li>GitHub: <a href="https://github.com/${engineer.gitHub}" target="_blank">${engineer.gitHub}</a></li>
-        </ul>
-    </section>`;
+        return `
+            <div class="col-md-3 col-sm-6 content-card">
+                <div class="card-big-shadow">
+                    <div class="card card-just-text" data-background="color" data-color="green" data-radius="none">
+                        <div class="content">
+                        <h6 class="category"><i class="fa-solid fa-laptop"></i> ${engineer.getRole()}</h6>
+                        <h4 class="title">${engineer.name}</h4>
+
+                        <p class="description">  
+                        <i class="fa-regular fa-id-card"></i> ID #${engineer.id} <br>
+                        <i class="fa-regular fa-envelope"></i> <a href="mailto:${engineer.email}" target="_blank">${engineer.email}</a> <br>
+                        <i class="fa-brands fa-github"></i> <a href="https://github.com/${engineer.gitHub}" target="_blank">${engineer.gitHub}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>`;
     };
 
     const internSection = intern => {
-        return `<section class="card">
-        <h1>Intern</h1>
-        <ul>
-            <li>Name: ${intern.name}</li>
-            <li>ID: ${intern.id}</li>
-            <li>Email: <a href="mailto:${intern.email}" target="_blank">${intern.email}</a></li>
-            <li>School: ${intern.school}</li>
-        </ul>
-    </section>`;
+        return `
+            <div class="col-md-3 col-sm-6 content-card">
+                <div class="card-big-shadow">
+                <div class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
+                <div class="content">
+                    <h6 class="category"><i class="fa-solid fa-user-graduate"></i> ${intern.getRole()}</h6>
+                    <h4 class="title">${intern.name}</h4>
+
+                    <p class="description">  
+                    <i class="fa-regular fa-id-card"></i> ID #${intern.id} <br>
+                    <i class="fa-regular fa-envelope"></i> <a href="mailto:${intern.email}" target="_blank">${intern.email}</a> <br>
+                    <i class="fa-solid fa-graduation-cap"></i> ${intern.school}</a>
+                    </p>
+                </div>
+            </div> 
+         </div>
+    </div>
+  </div>
+</div>
+    `;
     };
 
     const html  = [];
@@ -65,14 +92,13 @@ module.exports = team => {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./dist/style.css"/>
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading bg-danger">
-                <h1 class="text-center text-white">My Team</h1>
-            </div>
-        </div>
-    </div>
+    <header class="jumbotron">
+        <h1 class="display-3">My Team</h1>
+        <p class="lead">A simple Node.js command-line app for generating the team's basic info</p>
+    </header>
+
     <div class="container">
         <div class="row">
             <div class="row team-area col-12 d-flex justify-content-center">

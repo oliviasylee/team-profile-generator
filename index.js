@@ -46,7 +46,7 @@ const managerQuestions = () => {
                 const {name, id, email, officeNumber} = managerData;
                 const manager = new Manager(name, id, email, officeNumber)
                 teamArr.push(manager)
-                console.log(manager)
+                // console.log(manager)
             });
 }
 
@@ -102,11 +102,11 @@ const addEmployee = () => {
                 let employee;
                 if (role === 'Engineer'){
                     employee = new Engineer (name, id, email, github);
-                    console.log(employee);
+                    // console.log(employee);
 
                 } else if (role === 'Intern'){
                     employee = new Intern(name, id, email, school);
-                    console.log(employee);
+                    // console.log(employee);
                 }
             teamArr.push(employee); 
                 if (confirmEmployee) {
@@ -120,7 +120,7 @@ const addEmployee = () => {
 const generateHTMLFile = () => {
     fs.writeFile(outputPath, generateHTML(teamArr), 'utf-8', err => {
         if(err) throw err;
-        console.log(`HTML file has been created. Check out index.html in the dist/ folder to see it!`)
+        console.log(`HTML file has been created. You can see it in index.html in the dist/ folder!`)
    });
 }
 
@@ -131,7 +131,6 @@ managerQuestions()
     })
     .then(pageHTML => {
         return generateHTMLFile(pageHTML);
-        
     })
     .catch(err => {
     console.log(err);
