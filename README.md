@@ -26,7 +26,7 @@
   node index.js
   ```
   ## Usage
-Here is a full movie showing how the application works. Click the below screenshot. <br>
+Here is a full movie showing how the application works. [Click here](https://drive.google.com/file/d/1HA8Yzy8ePvq8e9AbrcB4wwuA5Z-RK-GQ/view) <br><br>
 [![preview](assets/team-profile-generator-CLI.png)](https://drive.google.com/file/d/1HA8Yzy8ePvq8e9AbrcB4wwuA5Z-RK-GQ/view)
  ### Application Interface
 [![README-generator-screenshot](assets/team-profile-generator.png)](https://github.com/oliviasylee/team-profile-generator)
